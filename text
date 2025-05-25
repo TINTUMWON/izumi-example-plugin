@@ -1,0 +1,9 @@
+const { izumi, mode } = require('../lib/');
+izumi({
+	pattern: "test ?(.*)",
+	fromMe: true, //false & mode
+	desc: 'To get remoteJid',
+	type: 'info'
+}, async (message, match, client) => {
+	await message.client.sendMessage(m.jid, {text: "Hey"})
+});
